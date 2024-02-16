@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Efeito de imagem com JavaScript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+</head>
+<body>
+    <h1>
+        Efeito de imagem com JavaScript
+    </h1>
+    <container class="container">
+        <img id="img" src="img/img.jpg">
+    </container>
+    <script>
+        // criação de variaveis
+        var imagem = document.getElementById('img') // Criação da variavel da imagem
+
+        // Criação dos eventos
+        imagem.addEventListener('mouseover', () =>{ //Criação do evento de passar o mouse por cima
+            imagem.style.transform = 'rotate(20deg)'; // Mudando o style da imagem para rotacionar os 20°
+        });    
+
+        imagem.addEventListener('mouseout', () => { //Criação do evento de tirar o mouse de cima da imagem
+            imagem.style.transform = 'rotate(0deg)'; // Voltando o style da iamgem para 0°, voltanto o que ela rotacionou
+        });
+    </script>
+</body>
+</html>
